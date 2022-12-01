@@ -1,12 +1,11 @@
 import '../styles/globals.css';
-import type { AppProps } from 'next/app';
 import Router from 'next/router';
 import { ChakraProvider } from '@chakra-ui/react';
 import Head from 'next/head'
 import NProgress from 'nprogress';
 import Layout from '../components/Layout'
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps }) {
   NProgress.configure({ showSpinner: false });
 
   Router.events.on('routeChangeStart', ()=> {
